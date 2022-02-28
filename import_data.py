@@ -10,12 +10,12 @@ import tensorflow.keras as keras
 def load_data_train(length, signal_len, samples = 0): 
 
     if length == "double":
-      dataset = h5py.File('/home/kfonseca_cps/dataset_doble/datasetd_05_2', 'r') 
+      dataset = h5py.File('./dataset/datasetd_05_2', 'r') 
       flag = 0
         
     elif length == "simple":
       flag = 1
-      dataset = h5py.File('/home/kfonseca_cps/datasets_3/train_025_3.h5', 'r') 
+      dataset = h5py.File('./dataset/train_025_3.h5', 'r') 
       
     data = dataset.get('data')
     data = np.array(data)
@@ -46,7 +46,7 @@ def load_data_train(length, signal_len, samples = 0):
     
 ## Import test function
 def load_data_test(signal_len): 
-    dataset = h5py.File('/home/kfonseca_cps/datasets_3/test_3', 'r')
+    dataset = h5py.File('./dataset/test_3', 'r')
     data = dataset.get('data')
     data = np.array(data)
     labels = dataset.get('labels')
