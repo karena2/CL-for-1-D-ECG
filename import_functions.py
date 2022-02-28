@@ -12,17 +12,8 @@ from sklearn.metrics import confusion_matrix
 from keras.callbacks import Callback
 from tensorflow.keras.models import Model
 
-## Contrastive_v1 data augmentation
-
     
-def get_augmenter(signal, ruido,signal_len):
-    signal_1 = signal[:,0:signal_len]
-    signal_2 = signal[:,signal_len:signal_len*2]
-    noise_1 = np.random.normal(0,0.03, signal_1.shape)
-    noise_2 = np.random.normal(0,0.05, signal_2.shape)
-    signal_1 = signal_1 + noise_1
-    signal_2 = signal_2 + noise_2
-    return signal_1,signal_2
+x
 
 ## Model functions
 
@@ -219,3 +210,12 @@ def calculate_f1(model,x_test,y_test):
   print(f'[Info]: F1 = {F1_2:.8} %')
   print(CF) 
   return F1_2
+
+def get_augmenter(signal, ruido,signal_len):
+    signal_1 = signal[:,0:signal_len]
+    signal_2 = signal[:,signal_len:signal_len*2]
+    noise_1 = np.random.normal(0,0.03, signal_1.shape)
+    noise_2 = np.random.normal(0,0.05, signal_2.shape)
+    signal_1 = signal_1 + noise_1
+    signal_2 = signal_2 + noise_2
+    return signal_1,signal_2
