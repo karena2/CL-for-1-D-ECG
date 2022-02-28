@@ -1,2 +1,3 @@
 # CL-for-1-D-ECG
-This repository has all code about the work.
+
+To run this code you need to download the dataset in : 
