@@ -1,7 +1,7 @@
 # Contrastive learning on one-dimensional ECG signals in challenging situations for the detection of Atrial fibrillation.
 
 This github contains all files used in the work.
-
+Link to the paper https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9909842
 
  **DATASET**
 
